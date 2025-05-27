@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <p>This is a simple page built with Next.</p>
       </section>
       <footer>
-        <p>&copy; 2025 My Website</p>
+        <Footer />
       </footer>
     </main>
   );

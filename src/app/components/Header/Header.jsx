@@ -13,20 +13,22 @@ export default function Header() {
     }
 
     return (
-        <header className="flex items-center justify-between py-9 px-5 md:px-0">
-            <Link href="/" className="flex items-center space-x-2">
+        <header className="flex items-center justify-between py-5">
+               <Link href="/" className="flex items-center">
                 <Image
                     src={
                         theme === "light"
-                            ? "/images/ui/area-logo.svg"
-                            : "/images/ui/area-logo-dark-mode.svg"
+                            ? "/images/ui/logo-area.svg"
+                            : "/images/ui/logo-area-dark-mode.svg"
                     }
                     alt="area-logo"
-                    width={70}
-                    height={70}
+                    width={40}
+                    height={40}
                     priority
-                    className="border rounded-full border-black dark:border-white"
                 />
+                <div className="text-2xl font-bold">
+                    A<span className="font-normal">rea</span>
+                </div>
             </Link>
             <div className="flex space-x-10">
                 <nav className="space-x-10">
