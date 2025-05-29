@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Carousel from "./components/Carousel/Carousel";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <Header />
       </header>
       <section>
-        <p>This is a simple page built with Next.</p>
+        <Carousel />
       </section>
       <footer>
         <Footer />
