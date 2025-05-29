@@ -1,78 +1,72 @@
 "use client";
-import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useEffect, useState } from "react";
 
 const links = [{ displayName: "Blog", href: "/blog" }];
 
 export default function Header() {
-    const { theme, setTheme } = useTheme()
-    const toggleTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
-    }
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className="flex items-center justify-between py-5">
-               <Link href="/" className="flex items-center">
-                <Image
-                    src={
-                        theme === "light"
-                            ? "/images/ui/logo-area.svg"
-                            : "/images/ui/logo-area-dark-mode.svg"
-                    }
-                    alt="area-logo"
-                    width={40}
-                    height={40}
-                    priority
-                />
-                <div className="text-2xl font-bold">
-                    A<span className="font-normal">rea</span>
-                </div>
-            </Link>
-            <div className="flex space-x-10">
-                <nav className="space-x-10">
-                    {links.map((link, idx) => (
-                        <Link key={idx} href={link.href}>
-                            {link.displayName}
-                        </Link>
-                    ))}
-                </nav>
-                <button
-                    onClick={toggleTheme}
-                    className="focus:outline-none cursor-pointer rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 relative overflow-hidden group"
-                    aria-label="Toggle theme"
+        <header
+            className={`transition-all duration-300 ease-in-out z-50 ${isFixed
+                ? "fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md shadow-lg"
+                : "relative bg-transparent text-white"
+                }`}
+            role="banner"
+        >
+            <div className="flex items-center justify-between py-2 max-w-7xl mx-auto px-4">
+                <Link
+                    href="/"
+                    className="flex items-center group"
+                    aria-label="Area36 Home Page"
+                    title="Area36 - Premium Travel Destinations"
                 >
-                    <div className="relative w-6 h-6">
-                        {/* Light Mode Icon */}
-                        <MdLightMode
-                            className={`absolute inset-0 w-6 h-6 text-yellow-500 transition-all duration-700 ease-in-out transform ${theme === "dark"
-                                ? "translate-y-0 rotate-0 scale-100 opacity-100"
-                                : "-translate-y-10 rotate-180 scale-0 opacity-0"
-                                }`}
-                        />
-                        {/* Dark Mode Icon */}
-                        <MdDarkMode
-                            className={`absolute inset-0 w-6 h-6 text-[#242535] dark:text-gray-300 transition-all duration-700 ease-in-out transform ${theme === "dark"
-                                ? "translate-y-10 rotate-180 scale-0 opacity-0"
-                                : "translate-y-0 rotate-0 scale-100 opacity-100"
-                                }`}
-                        />
+                    <img
+                        src="/images/ui/logo-area.svg"
+                        alt="Area36 Logo"
+                        width={50}
+                        height={50}
+                    />
 
-                        {/* Rotating Background Circle */}
-                        <div className={`absolute inset-0 rounded-full transition-all duration-500 transform ${theme === "dark"
-                            ? "bg-yellow-200/20 scale-150 rotate-180"
-                            : "bg-gray-200/20 scale-150 rotate-0"
-                            }`}></div>
+                    <div className="text-3xl font-bold text-white">
+                        A<span className="font-normal">rea<span className="font-medium text-blue-400">36</span></span>
                     </div>
+                </Link>
 
-                    {/* Hover Glow Effect */}
-                    <div className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-30 transition-all duration-300 blur-sm ${theme === "dark"
-                        ? "bg-yellow-400"
-                        : "bg-gray-600"
-                        }`}></div>
-                </button>
+                <div className="flex space-x-10 justify-center items-center">
+                    <nav
+                        className="space-x-10"
+                        role="navigation"
+                        aria-label="Ana Navigasyon"
+                    >
+                        {links.map((link, idx) => (
+                            <Link
+                                key={idx}
+                                href={link.href}
+                                className="hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
+                                aria-label={`${link.displayName} sayfasına git`}
+                                title={`${link.displayName} - İçeriklerimizi keşfedin`}
+                            >
+                                {link.displayName}
+                            </Link>
+                        ))}
+                    </nav>
+                </div>
             </div>
         </header>
-    )
+    );
 }

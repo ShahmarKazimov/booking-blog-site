@@ -1,23 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-  <style>
-    .main { fill: #242535; }
-    .window { fill: #ecf0f1; }
-  </style>
+  <defs>
+    <mask id="hole-mask">
+      <rect width="100" height="100" fill="white"/>
+      <rect x="40" y="40" width="20" height="25" rx="2" fill="black"/>
+    </mask>
+  </defs>
 
-  <!-- Ana blok (a harfi + ev) -->
-  <path class="main" d="M30 25
-    L70 15
-    L80 50
-    L70 80
-    L30 80
-    L20 50
-    Z
-    M45 55
-    A10 10 0 0 1 45 45
-    L55 45
-    A10 10 0 0 1 55 65
-    Z"/>
-
-  <!-- Pencere (negatif alanda a harfi) -->
-  <rect class="window" x="40" y="40" width="20" height="25" rx="2"/>
+  <path
+    d="M30 25
+       L70 15
+       L80 50
+       L70 80
+       L30 80
+       L20 50
+       Z
+       M45 55
+       A10 10 0 0 1 45 45
+       L55 45
+       A10 10 0 0 1 55 65
+       Z"
+    fill="#ecf0f1"
+    mask="url(#hole-mask)"
+  />
 </svg>
