@@ -24,11 +24,11 @@ export default function Header() {
         <header
             className={`transition-all duration-300 ease-in-out z-50 ${isFixed
                 ? "fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md shadow-lg"
-                : "relative bg-transparent text-white"
+                : "absolute right-0 left-0 bg-transparent text-white"
                 }`}
             role="banner"
         >
-            <div className="flex items-center justify-between py-2 max-w-7xl mx-auto px-4">
+            <div className="flex items-center justify-between py-2 px-4">
                 <Link
                     href="/"
                     className="flex items-center group"
@@ -51,15 +51,15 @@ export default function Header() {
                     <nav
                         className="space-x-10"
                         role="navigation"
-                        aria-label="Ana Navigasyon"
+                        aria-label="Navigation"
                     >
                         {links.map((link, idx) => (
                             <Link
                                 key={idx}
                                 href={link.href}
                                 className="hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
-                                aria-label={`${link.displayName} sayfasına git`}
-                                title={`${link.displayName} - İçeriklerimizi keşfedin`}
+                                aria-label={`${link.displayName} go to page`}
+                                title={`${link.displayName} - discover maintained travel content`}
                             >
                                 {link.displayName}
                             </Link>
