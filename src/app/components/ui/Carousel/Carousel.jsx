@@ -1,17 +1,106 @@
-"use client";
 import React from 'react';
-import HeroSection from '../HeroSection/HeroSection';
+import HeroSection from '../../HeroSection/HeroSection';
 import DestinationCarousel from './DestinationCarousel';
 import { destinationImages } from '../../data/ImageData';
 import '../../../../../src/app/globals.css';
+import areaCover from "../../../../../public/images/destinations/area36_slide1.jpg";
+import areaCoverHoney from "../../../../../public/images/destinations/area36_honey_slide3.jpg";
+import Image from 'next/image';
 
-const Carousel = () => {
+// Metadata export for SEO optimization
+export const metadata = {
+    title: 'Area36 – Luxury Resorts & Destinations',
+    description: 'Discover stunning destinations including Area36 luxury resorts and exclusive honeymoon suites. Browse our featured destination gallery.',
+    keywords: 'destinations, travel, luxury resorts, Area36, honeymoon, vacation',
+    openGraph: {
+        title: 'Area36 – Luxury Travel Destinations',
+        description: 'Explore our curated collection of premium travel destinations and resorts around the world.',
+        type: 'website',
+        url: 'https://your-domain.com', // TODO: After deployment, update this URL
+        siteName: 'Area36',
+        images: [
+            {
+                url: 'https://your-domain.com/og-image.jpg', // TODO: After deployment, update this URL
+                width: 1200,
+                height: 630,
+                alt: 'Area36 luxury travel destinations',
+            },
+        ],
+    },
+};
+
+const DestinationsPage = () => {
     return (
-        <main className="relative">
-            <HeroSection />
-            <DestinationCarousel images={destinationImages} />
-        </main>
+        <div className="flex flex-col space-y-30">
+            {/* Hero Section */}
+            <header>
+                <HeroSection />
+            </header>
+
+            {/* Main Content */}
+            <main className="relative px-4 sm:px-6 lg:px-8" role="main">
+                <div className="text-center">
+                    <div className="inline-block">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent relative">
+                            Explore Our Featured Destinations
+                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" aria-hidden="true"></div>
+                        </h2>
+                    </div>
+                </div>
+                <div className="max-w-7xl mx-auto">
+                    {/* Page Title for Screen Readers */}
+                    <h1 className="sr-only">Destination Gallery and Featured Areas</h1>
+
+                    {/* Destinations Gallery Section */}
+                    <section
+                        className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:gap-4"
+                        aria-label="Destination gallery"
+                    >
+                        {/* Main Carousel */}
+                        <article className="lg:col-span-3 lg:row-span-5">
+                            <h2 className="sr-only">Destination Carousel</h2>
+                            <DestinationCarousel
+                                images={destinationImages}
+                                aria-label="Destination photo carousel"
+                            />
+                        </article>
+
+                        {/* Featured Area 1 */}
+                        <article className="lg:col-span-2 lg:row-span-2 lg:col-start-4">
+                            <h3 className="sr-only">Area36 Featured Image</h3>
+                            <figure className="h-full">
+                                <Image
+                                    src={areaCover}
+                                    alt="Area36 destination - luxury resort view with stunning landscape"
+                                    className="rounded-lg shadow-lg object-cover w-full h-full"
+                                    priority={true}
+                                    placeholder="blur"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    quality={90}
+                                />
+                            </figure>
+                        </article>
+
+                        {/* Featured Area 2 */}
+                        <article className="lg:col-span-2 lg:row-span-3 lg:col-start-4">
+                            <h3 className="sr-only">Area36 Honey Featured Image</h3>
+                            <figure className="h-full">
+                                <Image
+                                    src={areaCoverHoney}
+                                    alt="Area36 Honey section - exclusive honeymoon suite with romantic atmosphere"
+                                    className="rounded-lg shadow-lg object-cover w-full h-full"
+                                    priority={true}
+                                    placeholder="blur"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    quality={90}
+                                />
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+            </main>
+        </div>
     );
 };
 
-export default Carousel;
+export default DestinationsPage;
