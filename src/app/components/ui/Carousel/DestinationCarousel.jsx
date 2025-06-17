@@ -5,29 +5,15 @@ import Image from 'next/image';
 
 const DestinationCarousel = ({ images }) => {
     return (
-        <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white" aria-label="Featured Destinations">
-            <div className="text-center mb-12">
-                <div className="inline-block">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent relative">
-                        Explore Our Featured Destinations
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" aria-hidden="true"></div>
-                    </h2>
-                </div>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">
-                    Discover the beauty of our handpicked destinations. Each location offers unique experiences, stunning landscapes, and unforgettable adventures tailored for every type of traveler.
-                </p>
-            </div>
-
+        <section className="rounded-2xl" aria-label="Featured Destinations">
             {/* Beautiful Carousel Container */}
-            <div className="max-w-7xl mx-auto">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-8 border border-gray-100">
+            <div>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                     {/* Decorative Background Pattern */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 opacity-30" aria-hidden="true"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 opacity-30" aria-hidden="true"></div>
-
                     <Carousel
                         autoplay
-                        dots={{ className: "custom-dots" }}
                         autoplaySpeed={4000}
                         speed={800}
                         effect="fade"
@@ -41,11 +27,10 @@ const DestinationCarousel = ({ images }) => {
                                         <Image
                                             src={item.src}
                                             alt={item.alt}
-                                            fill
                                             priority={index === 0}
                                             className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
                                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                            quality={85}
+                                            quality={100}
                                         />
                                     </div>
 
@@ -89,24 +74,7 @@ const DestinationCarousel = ({ images }) => {
                         ))}
                     </Carousel>
                 </div>
-
-                {/* Stats Section */}
-                <section className="grid grid-cols-3 gap-8 mt-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-gray-100" aria-label="Service Features">
-                    <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-800 mb-1">Premium</div>
-                        <div className="text-sm text-gray-600">Quality Destinations</div>
-                    </div>
-                    <div className="text-center border-x border-gray-200">
-                        <div className="text-2xl font-bold text-gray-800 mb-1">24/7</div>
-                        <div className="text-sm text-gray-600">Customer Support</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-800 mb-1">Secure</div>
-                        <div className="text-sm text-gray-600">Booking System</div>
-                    </div>
-                </section>
             </div>
-
             <style jsx>{`
                 :global(.custom-dots) {
                     bottom: -40px !important;
@@ -134,7 +102,8 @@ const DestinationCarousel = ({ images }) => {
                     transform: scale(1.15) !important;
                     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15) !important;
                 }
-            `}</style>
+            `}
+            </style>
         </section>
     );
 };

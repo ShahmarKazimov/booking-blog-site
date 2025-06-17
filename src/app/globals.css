@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-body {
+/* body {
   @apply bg-[#ebe7d8];
-}
+} */
 
 /* Animation Classes */
 .animate-fade-in-up {

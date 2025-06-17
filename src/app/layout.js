@@ -9,9 +9,8 @@ const geistSans = Geist({
 });
 
 export const metadata = {
-  title: "Area | Discover, Book, and Travel Smart",
-  description:
-    "Plan trips, book stays, and get inspired by real travel stories on Area. The ultimate platform for travelers and explorers.",
+  title: "Area36 website",
+  description: "Find top-rated cabins, chalets, and villas for rent. Comfortable stays, breathtaking views, and unforgettable experiences with Area36."
 };
 
 export default function RootLayout({ children }) {

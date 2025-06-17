@@ -1,42 +1,41 @@
-// components/data/ImageData.js
-import image1 from '../../../../public/images/destinations/area-image2.jpg';
-import image2 from '../../../../public/images/destinations/area-image4.jpg';
-import image3 from '../../../../public/images/destinations/area-image6.jpg';
-import image4 from '../../../../public/images/destinations/area-image5.jpg';
+import image1 from '../../../../public/images/blog/Qafqaz Royal Chalet/Qafqaz Royal Chalet.jpg';
+import image2 from '../../../../public/images/blog/Qafqaz Family Chalet/Qafqaz Family Chalet-1.jpg';
+import image3 from '../../../../public/images/blog/Qafqaz Rolling Bungalow/Qafqaz Rolling Bungalow.jpg';
+import image4 from '../../../../public/images/blog/Qafqaz Milano Deluxe/Qafqaz Milano Deluxe9.jpg';
 import backgroundImage from '../../../../public/images/destinations/area-image-hero.jpg';
 
 export const destinationImages = [
     {
         src: image1,
-        title: "Mountain Paradise",
-        description: "Breathtaking mountain views and pristine alpine adventures",
+        title: "Qafqaz Royal Chalet",
+        description: "4 bedrooms, 3 bathrooms, scenic terrace, and a large pool – perfect for 8 guests.",
         badge: "Adventure",
-        alt: "Majestic mountain landscape with snow-capped peaks and crystal clear lakes",
-        location: "Swiss Alps"
+        alt: "Qafqaz Royal Chalet",
+        location: "Gabala, Azerbaijan"
     },
     {
         src: image2,
-        title: "Ocean Escape",
-        description: "Crystal clear turquoise waters and white sandy beaches",
+        title: "Qafqaz Family Chalet",
+        description: "3 bedrooms, 2 bathrooms, and a heated pool – ideal for a cozy stay.",
         badge: "Relaxation",
-        alt: "Tropical ocean paradise with pristine beaches and coral reefs",
-        location: "Maldives"
+        alt: "Qafqaz Family Chalet",
+        location: "Gabala, Azerbaijan"
     },
     {
         src: image3,
-        title: "Forest Adventure",
-        description: "Ancient forests and wildlife exploration experiences",
+        title: "Qafqaz Rolling Bungalow",
+        description: "4 bedrooms, 4 bathrooms, with indoor and outdoor pools – perfect for a luxurious stay.",
         badge: "Nature",
-        alt: "Dense green forest with towering trees and natural hiking trails",
-        location: "Amazon Rainforest"
+        alt: "Qafqaz Rolling Bungalow",
+        location: "Gabala, Azerbaijan"
     },
     {
         src: image4,
-        title: "Desert Mystique",
-        description: "Golden sand dunes and starlit desert camping",
+        title: "Qafqaz Milano Deluxe",
+        description: "4 bedrooms, 2 bathrooms – comfortably accommodates up to 9 guests.",
         badge: "Mystery",
-        alt: "Vast golden sand dunes under dramatic desert sunset skies",
-        location: "Sahara Desert"
+        alt: "Qafqaz Milano Deluxe",
+        location: "Gabala, Azerbaijan"
     }
 ];
 
