@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// Server-side function to get current year
 function getCurrentYear() {
     return new Date().getFullYear();
 }
@@ -90,12 +89,12 @@ export default async function Footer() {
                     <div className="lg:col-span-1">
                         <Link
                             href="/"
-                            className="flex items-center mb-6 group gap-x-2"
+                            className="flex items-center mb-6 -ml-1.5  group gap-x-2"
                             aria-label="Area36 Home Page"
                             title="Area36 - Premium Travel Destinations"
                         >
                             <img
-                                src="/images/ui/area-logo.png"
+                                src="/images/ui/area-logo.svg"
                                 alt="Area36 Logo"
                                 width={65}
                                 height={65}
@@ -120,25 +119,25 @@ export default async function Footer() {
                                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                 </svg>
-                                <a
+                                <Link
                                     href="mailto:info@area36.com"
                                     className="hover:text-blue-400 transition-colors"
                                     aria-label="Email us at info@area36.com"
                                 >
                                     info@area36.com
-                                </a>
+                                </Link>
                             </div>
                             <div className="flex items-center">
                                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                 </svg>
-                                <a
+                                <Link
                                     href="tel:+994504271987"
                                     className="hover:text-blue-400 transition-colors"
                                     aria-label="Call us at +994 50 427 19 87"
                                 >
                                     +994 (50) 427-19-87
-                                </a>
+                                </Link>
                             </div>
                             <div className="flex items-center">
                                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -167,7 +166,7 @@ export default async function Footer() {
                                 </Link>
                             ))}
                         </div>
-                        
+
                         {/* Copyright moved here for better layout */}
                         <div className="text-sm text-gray-400 mt-8">
                             <span>© {currentYear} Area36. All rights reserved.</span>

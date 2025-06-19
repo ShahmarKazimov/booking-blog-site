@@ -1,15 +1,18 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { heroBackgroundImage } from '../../data/ImageData';
+import { heroBackgroundImage } from '../../data/carouselImages';
 
 const HeroSection = () => {
     return (
         <section
-            className="relative sm:-top-[5rem] -top-[9rem] left-0 w-full h-[550px] sm:h-[720px] z-[-1]"
+            className="relative sm:-top-[5.1rem] -top-[9rem] left-0 w-full h-[550px] sm:h-[720px] z-[-1] bg-black"
             aria-label="Hero Section"
         >
-            <div className="relative w-full h-[620px] sm:h-[720px]">
+            <div
+                className="relative w-full h-[620px] sm:h-[720px] bg-black"
+                style={{ backgroundColor: '#000000' }}
+            >
                 <Image
                     src={heroBackgroundImage}
                     alt="Area36 Hero - Stunning travel destinations and breathtaking landscapes"
@@ -18,6 +21,7 @@ const HeroSection = () => {
                     className="object-cover brightness-50"
                     sizes="100vw"
                     quality={85}
+                    style={{ backgroundColor: '#000000' }}
                 />
             </div>
 

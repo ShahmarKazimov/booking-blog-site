@@ -4,7 +4,7 @@ import image3 from '../../../public/images/blog/Qafqaz Rolling Bungalow/Qafqaz R
 import image4 from '../../../public/images/blog/Qafqaz Milano Deluxe/Qafqaz Milano Deluxe9.jpg';
 import backgroundImage from '../../../public/images/destinations/area-image-hero.jpg';
 
-export const destinationImages = [
+export const carouselImages = [
     {
         src: image1,
         title: "Qafqaz Royal Chalet",

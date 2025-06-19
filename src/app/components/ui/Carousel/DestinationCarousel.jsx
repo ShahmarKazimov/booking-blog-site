@@ -8,7 +8,7 @@ const DestinationCarousel = ({ images }) => {
         <section className="rounded-2xl" aria-label="Featured Destinations">
             {/* Beautiful Carousel Container */}
             <div>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-3xl overflow-hidden">
                     {/* Decorative Background Pattern */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 opacity-30" aria-hidden="true"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 opacity-30" aria-hidden="true"></div>
@@ -22,13 +22,13 @@ const DestinationCarousel = ({ images }) => {
                     >
                         {images.map((item, index) => (
                             <div key={index}>
-                                <article className="relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-xl overflow-hidden group shadow-lg">
+                                <article className="relative w-full rounded-xl overflow-hidden group shadow-lg">
                                     <div className="relative w-full h-full">
                                         <Image
                                             src={item.src}
                                             alt={item.alt}
                                             priority={index === 0}
-                                            className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                                            className="object-cover sm:h-[35rem] transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
                                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             quality={100}
                                         />
