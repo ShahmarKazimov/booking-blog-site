@@ -1,12 +1,13 @@
 import React from "react";
 import Icons from "../ui/icons/icons";
+import Link from "next/link";
 
 const Card = ({ property }) => {
     return (
-        <div className="relative flex justify-between w-full flex-col rounded-xl bg-white text-gray-700 shadow-lg">
+        <div className="relative flex justify-between w-full flex-col rounded-xl bg-white text-gray-700 shadow-xl">
             <div>
                 <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl">
-                    <img src={property.image} alt={property.title} className="w-full h-56 object-cover" />
+                    <img src={property.images[0]} alt={property.title} className="w-full h-56 object-cover" />
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-transparent to-black/60" />
                 </div>
                 <div className="p-6">
@@ -37,9 +38,11 @@ const Card = ({ property }) => {
                         </span>
                     )}
                 </div>
-                <button className="w-full rounded-lg bg-gray-900 py-3.5 px-7 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
-                    Reserve
-                </button>
+                <Link href={`/${property.slug}`} >
+                    <button className="cursor-pointer w-full rounded-lg bg-gray-900 py-3.5 px-7 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
+                        Details
+                    </button>
+                </Link>
             </div>
         </div>
     );
