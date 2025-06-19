@@ -1,12 +1,12 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { heroBackgroundImage } from '../data/ImageData';
+import { heroBackgroundImage } from '../../data/ImageData';
 
 const HeroSection = () => {
     return (
         <section
-            className="relative sm:-top-[1rem] -top-[6rem] left-0 w-full sm:h-[630px] z-[-1]"
+            className="relative sm:-top-[5rem] -top-[9rem] left-0 w-full h-[550px] sm:h-[720px] z-[-1]"
             aria-label="Hero Section"
         >
             <div className="relative w-full h-[620px] sm:h-[720px]">
@@ -41,16 +41,16 @@ const HeroSection = () => {
                         </span>
                     </h1>
                     <p className="text-xl md:text-2xl drop-shadow-lg opacity-90 animate-fade-in-up animation-delay-300">
-                        Experience the world's most beautiful destinations and create unforgettable memories
+                        Experience the beauty of Qafqaz and create unforgettable memories in our luxurious chalets.
                     </p>
                     <div className="flex justify-center space-x-8 mt-8 animate-fade-in-up animation-delay-600" role="banner">
                         <div className="text-center">
-                            <div className="text-3xl font-bold" aria-label="50 plus destinations">50+</div>
+                            <div className="text-3xl font-bold" aria-label="50 plus destinations">10+</div>
                             <div className="text-sm opacity-80">Destinations</div>
                         </div>
                         <div className="w-px h-12 bg-white/30" aria-hidden="true"></div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold" aria-label="Over 1 million happy travelers">1M+</div>
+                            <div className="text-3xl font-bold" aria-label="Over 1 million happy travelers">1K+</div>
                             <div className="text-sm opacity-80">Happy Travelers</div>
                         </div>
                         <div className="w-px h-12 bg-white/30" aria-hidden="true"></div>

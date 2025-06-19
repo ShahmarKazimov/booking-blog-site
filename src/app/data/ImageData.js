@@ -1,8 +1,8 @@
-import image1 from '../../../../public/images/blog/Qafqaz Royal Chalet/Qafqaz Royal Chalet.jpg';
-import image2 from '../../../../public/images/blog/Qafqaz Family Chalet/Qafqaz Family Chalet-1.jpg';
-import image3 from '../../../../public/images/blog/Qafqaz Rolling Bungalow/Qafqaz Rolling Bungalow.jpg';
-import image4 from '../../../../public/images/blog/Qafqaz Milano Deluxe/Qafqaz Milano Deluxe9.jpg';
-import backgroundImage from '../../../../public/images/destinations/area-image-hero.jpg';
+import image1 from '../../../public/images/blog/Qafqaz Royal Chalet/Qafqaz Royal Chalet.jpg';
+import image2 from '../../../public/images/blog/Qafqaz Family Chalet/Qafqaz Family Chalet-1.jpg';
+import image3 from '../../../public/images/blog/Qafqaz Rolling Bungalow/Qafqaz Rolling Bungalow.jpg';
+import image4 from '../../../public/images/blog/Qafqaz Milano Deluxe/Qafqaz Milano Deluxe9.jpg';
+import backgroundImage from '../../../public/images/destinations/area-image-hero.jpg';
 
 export const destinationImages = [
     {

@@ -1,13 +1,11 @@
 import React from 'react';
-import HeroSection from '../../HeroSection/HeroSection';
 import DestinationCarousel from './DestinationCarousel';
-import { destinationImages } from '../../data/ImageData';
+import { destinationImages } from '../../../data/ImageData';
 import '../../../../../src/app/globals.css';
 import areaCover from "../../../../../public/images/destinations/area36_slide1.jpg";
 import areaCoverHoney from "../../../../../public/images/destinations/area36_honey_slide3.jpg";
 import Image from 'next/image';
 
-// Metadata export for SEO optimization
 export const metadata = {
     title: 'Area36 – Luxury Resorts & Destinations',
     description: 'Discover stunning destinations including Area36 luxury resorts and exclusive honeymoon suites. Browse our featured destination gallery.',
@@ -31,19 +29,13 @@ export const metadata = {
 
 const DestinationsPage = () => {
     return (
-        <div className="flex flex-col space-y-30">
-            {/* Hero Section */}
-            <header>
-                <HeroSection />
-            </header>
-
+        <div className="flex flex-col">
             {/* Main Content */}
             <main className="relative px-4 sm:px-6 lg:px-8" role="main">
                 <div className="text-center">
                     <div className="inline-block">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent relative">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black relative">
                             Explore Our Featured Destinations
-                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" aria-hidden="true"></div>
                         </h2>
                     </div>
                 </div>

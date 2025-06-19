@@ -52,8 +52,6 @@ export const metadata = {
     }
 };
 
-
-
 export default function CardsPage() {
     return <Cards />;
 }
