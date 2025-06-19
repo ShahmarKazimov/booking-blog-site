@@ -1,6 +1,6 @@
 import React from 'react';
 import DestinationCarousel from './DestinationCarousel';
-import { destinationImages } from '../../../data/ImageData';
+import { carouselImages } from '../../../data/carouselImages';
 import '../../../../../src/app/globals.css';
 import areaCover from "../../../../../public/images/destinations/area36_slide1.jpg";
 import areaCoverHoney from "../../../../../public/images/destinations/area36_honey_slide3.jpg";
@@ -45,26 +45,27 @@ const DestinationsPage = () => {
 
                     {/* Destinations Gallery Section */}
                     <section
-                        className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:gap-4"
+                        className="sm:h-[35rem] grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-6 lg:gap-4"
                         aria-label="Destination gallery"
                     >
                         {/* Main Carousel */}
-                        <article className="lg:col-span-3 lg:row-span-5">
+                        <article className="lg:col-span-3 lg:row-span-2">
                             <h2 className="sr-only">Destination Carousel</h2>
                             <DestinationCarousel
-                                images={destinationImages}
+                                images={carouselImages}
                                 aria-label="Destination photo carousel"
+                                className="h-full"
                             />
                         </article>
 
                         {/* Featured Area 1 */}
-                        <article className="lg:col-span-2 lg:row-span-2 lg:col-start-4">
+                        <article className="lg:col-span-2 lg:row-span-1 lg:col-start-4">
                             <h3 className="sr-only">Area36 Featured Image</h3>
                             <figure className="h-full">
                                 <Image
                                     src={areaCover}
                                     alt="Area36 destination - luxury resort view with stunning landscape"
-                                    className="rounded-lg shadow-lg object-cover w-full h-full"
+                                    className="rounded-lg object-cover w-full h-full"
                                     priority={true}
                                     placeholder="blur"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -74,13 +75,13 @@ const DestinationsPage = () => {
                         </article>
 
                         {/* Featured Area 2 */}
-                        <article className="lg:col-span-2 lg:row-span-3 lg:col-start-4">
+                        <article className="lg:col-span-2 lg:row-span-1 lg:col-start-4">
                             <h3 className="sr-only">Area36 Honey Featured Image</h3>
                             <figure className="h-full">
                                 <Image
                                     src={areaCoverHoney}
                                     alt="Area36 Honey section - exclusive honeymoon suite with romantic atmosphere"
-                                    className="rounded-lg shadow-lg object-cover w-full h-full"
+                                    className="rounded-lg object-cover w-full h-full"
                                     priority={true}
                                     placeholder="blur"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
