@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Card = ({ property }) => {
     return (
-        <div className="relative flex justify-between w-full flex-col rounded-xl bg-white text-gray-700 shadow-xl">
+        <div className="border border-black/10 relative flex justify-between w-full flex-col rounded-xl bg-white text-gray-700 shadow-xl">
             <div>
                 <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl">
                     <img src={property.images[0]} alt={property.title} className="w-full h-56 object-cover" />
