@@ -37,7 +37,7 @@ export default function Header() {
                         href="https://wa.me/994504271987?text=Hello, I would like to get more information about this house."
                         target="_blank"
                         rel="noopener noreferrer">
-                        <button className="cursor-pointer w-full rounded-lg py-3.5 px-7 text-sm font-semibold hover:text-white/75 uppercase text-white transition-all">
+                        <button className="cursor-pointer w-full rounded-lg py-3.5 text-sm font-semibold hover:text-white/75 uppercase text-white transition-all">
                             Contact
                         </button>
                     </Link>

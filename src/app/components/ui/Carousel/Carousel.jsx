@@ -34,7 +34,7 @@ const DestinationsPage = () => {
             <main className="relative px-4 lg:px-0" role="main">
                 <div className="text-center">
                     <div className="inline-block">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black relative">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black relative">
                             Explore Our Featured Destinations
                         </h2>
                     </div>

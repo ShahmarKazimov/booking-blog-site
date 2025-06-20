@@ -8,7 +8,7 @@ const Cards = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="inline-block">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black relative">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-black relative">
               Featured Properties
             </h2>
           </div>
