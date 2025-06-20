@@ -28,7 +28,7 @@ export default function StickyHeader() {
             role="banner"
             aria-label="Sticky Navigation"
         >
-            <div className="flex items-center justify-between py-2 pl-[0.7rem] pr-[1.1rem] sm:px-10">
+            <div className="flex items-center justify-between py-2 pl-[0.7rem] pr-[1.1rem] xl:px-10">
                 <div className="flex items-center group">
                     <Link
                         href="/"
