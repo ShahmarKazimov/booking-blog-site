@@ -45,9 +45,13 @@ const TestimonialSlider = () => {
             <div className="w-full max-w-7xl mx-auto relative z-10">
                 {/* Header */}
                 <header className="text-center mb-6 sm:mb-8">
-                    <h2 id="testimonial-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
-                        What Our Customers Say
-                    </h2>
+                    <div className="text-center">
+                        <div className="inline-block">
+                            <h2 id="testimonial-heading" className="text-2xl md:text-3xl font-bold text-black relative mb-3 sm:mb-4">
+                                What Our Customers Say
+                            </h2>
+                        </div>
+                    </div>
                     <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto mb-4">
                         Discover why thousands of customers trust our timepieces for their most important moments.
                     </p>
@@ -65,7 +69,6 @@ const TestimonialSlider = () => {
                         {testimonials.map((testimonial) => (
                             <article
                                 key={testimonial.id}
-                                className=""
                                 style={{ width: `${100 / testimonials.length}%` }}
                             >
                                 <blockquote className="bg-white/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl flex flex-col items-center text-center border border-black/10 sm:shadow-sm min-h-[320px] sm:min-h-[380px] lg:min-h-[400px]">
